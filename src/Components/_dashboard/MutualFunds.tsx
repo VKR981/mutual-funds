@@ -2,13 +2,7 @@ import React, { useState } from "react";
 import { Input } from "../Input";
 import { MfRow } from "./MfRow";
 
-const mutualFunds = [
-  "https://api.mfapi.in/mf/100027",
-  "https://api.mfapi.in/mf/100028",
-  "https://api.mfapi.in/mf/100029",
-  "https://api.mfapi.in/mf/100030",
-  "https://api.mfapi.in/mf/100031",
-];
+const mutualFunds = ["100027", "100028", "100029", "100030", "100031"];
 
 export const MutualFunds = () => {
   const [filter, setFilter] = useState<string>();
@@ -41,7 +35,7 @@ export const MutualFunds = () => {
           </thead>
           <tbody>
             {mutualFunds.map((mf, index) => {
-              return <MfRow key={index} url={mf} filter={filter} />;
+              return <MfRow key={index} mutualFundId={mf} filter={filter} />;
             })}
           </tbody>
         </table>

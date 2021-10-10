@@ -1,16 +1,20 @@
 import React from "react";
 import { QueryClient, useQuery } from "react-query";
+import { useHistory } from "react-router";
 import { getMutualFunds } from "../../apis";
 
 interface Props {
-  url: string;
+  mutualFundId: string;
   filter: string | undefined;
 }
 
-export const MfRow = ({ url, filter }: Props) => {
-  const { data, error, isLoading } = useQuery(["mf", url], () =>
-    getMutualFunds(url)
+export const MfRow = ({ mutualFundId, filter }: Props) => {
+  const { data, error, isLoading } = useQuery(["mf", mutualFundId], () =>
+    getMutualFunds(mutualFundId)
   );
+
+  const history = useHistory();
+
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error</div>;
   if (!data) return <div>No data</div>;
@@ -24,7 +28,10 @@ export const MfRow = ({ url, filter }: Props) => {
   )
     return null;
   return (
-    <tr className="w-full ">
+    <tr
+      onClick={() => history.push(`/details/${mutualFundId}`)}
+      className="w-full "
+    >
       <td className="px-1 py-2 w-1/3 text-center text-sm font-bold text-gray-600">
         {fund_house}
       </td>

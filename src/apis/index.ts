@@ -13,8 +13,10 @@ type MutualFund = {
   status: string;
 };
 
-export const getMutualFunds = async (url: string): Promise<MutualFund> => {
-  const response = await fetch(url);
+export const getMutualFunds = async (
+  mutualFundId: string
+): Promise<MutualFund> => {
+  const response = await fetch("https://api.mfapi.in/mf/" + mutualFundId);
   const data = await response.json();
   return data;
 };

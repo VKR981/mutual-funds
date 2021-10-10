@@ -9,6 +9,7 @@ import {
   QueryClient,
   QueryClientProvider,
 } from "react-query";
+import { Details } from "./Pages/Details";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +23,9 @@ function App() {
           </Route>
           <Route path="/login">
             <Login />
+          </Route>
+          <Route path="/details/:id">
+            <Details />
           </Route>
           <Route path="/">
             <Dashboard />
