@@ -1,4 +1,4 @@
-type MutualFund = {
+export type MutualFund = {
   meta: {
     fund_house: string;
     scheme_type: string;
