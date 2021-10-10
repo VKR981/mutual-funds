@@ -26,10 +26,10 @@ export const MutualFunds = () => {
                 Scheme
               </th>
               <th scope="col" className="pb-2 w-1/3">
-                Category
+                Fund house
               </th>
               <th scope="col" className="pb-2 w-1/3">
-                Change
+                NAV
               </th>
             </tr>
           </thead>
