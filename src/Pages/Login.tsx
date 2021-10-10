@@ -1,12 +1,23 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router";
 import { Button } from "../Components/Button";
 import { Input } from "../Components/Input";
-import { useAppSelector } from "../hooks/redux";
+import { useAppDispatch, useAppSelector } from "../hooks/redux";
+import { setCurrentUser } from "../redux/userReducer";
 
 export const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const dispatch = useAppDispatch();
+
+  const history = useHistory();
+
+  const users = useAppSelector((state) => state.user.users);
+
+  useEffect(() => {
+    dispatch(setCurrentUser(null));
+  }, [dispatch]);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -16,15 +27,14 @@ export const Login = () => {
       setPassword(value);
     }
   };
-  const history = useHistory<"/login">();
-  const users = useAppSelector((state) => state.user.users);
 
   const handleSubmit: React.MouseEventHandler<HTMLButtonElement> = (e) => {
     const user = users.find((user) => user.email === email);
     if (user && user.password === password) {
+      dispatch(setCurrentUser(user));
       history.push("/");
     } else {
-      alert("Login Failed");
+      !user ? alert("User not found") : alert("Wrong password");
     }
   };
 
@@ -42,6 +52,7 @@ export const Login = () => {
         <Input
           label="Password"
           name="password"
+          type="password"
           placeholder="Your password"
           value={password}
           onChange={handleInputChange}
@@ -49,6 +60,10 @@ export const Login = () => {
 
         <Button onClick={handleSubmit}>
           <span>Login</span>
+        </Button>
+        <p className="text-center font-bold">or</p>
+        <Button onClick={() => history.push("/signup")}>
+          <span>Sign up</span>
         </Button>
       </form>
     </div>

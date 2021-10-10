@@ -30,6 +30,10 @@ export const Details = () => {
         <h1 className="font-bold p-4 text-center text-lg bg-gray-800 text-gray-100 mb-8">
           {scheme_name}
         </h1>
+        <h1
+          className="pl-4 font-bold underline"
+          onClick={() => history.push("/")}
+        >{`<- Back`}</h1>
         <div className="p-4">
           <h2 className="font-bold text-gray-500 mb-1">Scheme type:</h2>
           <h1 className="text-lg mb-2">{scheme_type}</h1>

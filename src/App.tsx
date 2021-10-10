@@ -10,6 +10,7 @@ import {
   QueryClientProvider,
 } from "react-query";
 import { Details } from "./Pages/Details";
+import { Profile } from "./Pages/Profile";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +27,9 @@ function App() {
           </Route>
           <Route path="/details/:id">
             <Details />
+          </Route>
+          <Route path="/profile">
+            <Profile />
           </Route>
           <Route path="/">
             <Dashboard />
