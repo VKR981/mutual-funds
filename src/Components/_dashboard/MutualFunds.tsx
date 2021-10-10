@@ -25,16 +25,16 @@ export const MutualFunds = () => {
         />
       </div>
       <div className="shadow-custom p-4 rounded-md">
-        <table className="table table-striped ">
+        <table className="table table-striped w-full">
           <thead className="border-b ">
             <tr>
-              <th scope="col" className="pb-2">
+              <th scope="col" className="pb-2 w-1/3">
                 Name
               </th>
-              <th scope="col" className="pb-2">
+              <th scope="col" className="pb-2 w-1/3">
                 NAV
               </th>
-              <th scope="col" className="pb-2">
+              <th scope="col" className="pb-2 w-1/3">
                 Change
               </th>
             </tr>

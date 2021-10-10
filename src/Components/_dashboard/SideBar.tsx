@@ -38,7 +38,11 @@ export const SideBar = ({ show, toggle }: Props) => {
       } transition-transform overflow-hidden z-10 bg-cyan-800 text-white text-lg font-bold absolute h-full left-0 top-0 pt-8`}
     >
       {sideBarOptions.map((option) => (
-        <h1 key={option.id} onClick={option.onClick} className="py-2 px-4 w-36">
+        <h1
+          key={option.id}
+          onClick={option.onClick}
+          className="py-2 px-4 w-36 cursor-pointer"
+        >
           {option.name}
         </h1>
       ))}
