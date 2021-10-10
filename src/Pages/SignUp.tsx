@@ -1,4 +1,4 @@
-import React, { MouseEventHandler, useCallback, useReducer } from "react";
+import React, { useCallback, useReducer } from "react";
 import { useHistory } from "react-router-dom";
 import { Button } from "../Components/Button";
 import { Input } from "../Components/Input";

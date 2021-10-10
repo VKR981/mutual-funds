@@ -1,7 +1,7 @@
 import React, { useCallback, useReducer } from "react";
 import { useHistory } from "react-router";
 import { useAppDispatch, useAppSelector } from "../hooks/redux";
-import { addUser, setCurrentUser, updateUser } from "../redux/userReducer";
+import { setCurrentUser, updateUser } from "../redux/userReducer";
 import { Button } from "../Components/Button";
 import { Input } from "../Components/Input";
 import { Select } from "../Components/Select";

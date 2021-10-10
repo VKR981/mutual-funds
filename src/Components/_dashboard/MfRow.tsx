@@ -1,5 +1,4 @@
-import React from "react";
-import { QueryClient, useQuery } from "react-query";
+import { useQuery } from "react-query";
 import { useHistory } from "react-router";
 import { getMutualFunds } from "../../apis";
 

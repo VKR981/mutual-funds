@@ -1,14 +1,8 @@
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Dashboard } from "./Pages/Dashboard";
 import { Login } from "./Pages/Login";
 import { SignUp } from "./Pages/SignUp";
-import {
-  useQuery,
-  useMutation,
-  useQueryClient,
-  QueryClient,
-  QueryClientProvider,
-} from "react-query";
+import { QueryClient, QueryClientProvider } from "react-query";
 import { Details } from "./Pages/Details";
 import { Profile } from "./Pages/Profile";
 import { EditUserProfile } from "./Pages/EditUserProfile";
