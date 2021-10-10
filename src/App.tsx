@@ -6,6 +6,7 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import { Details } from "./Pages/Details";
 import { Profile } from "./Pages/Profile";
 import { EditUserProfile } from "./Pages/EditUserProfile";
+import { PrivateRoute } from "./Components/PrivateRoute";
 
 const queryClient = new QueryClient();
 
@@ -20,18 +21,18 @@ function App() {
           <Route path="/login">
             <Login />
           </Route>
-          <Route path="/details/:id">
+          <PrivateRoute path="/details/:id">
             <Details />
-          </Route>
-          <Route path="/profile">
+          </PrivateRoute>
+          <PrivateRoute path="/profile">
             <Profile />
-          </Route>
-          <Route path="/editprofile">
+          </PrivateRoute>
+          <PrivateRoute path="/editprofile">
             <EditUserProfile />
-          </Route>
-          <Route path="/">
+          </PrivateRoute>
+          <PrivateRoute path="/">
             <Dashboard />
-          </Route>
+          </PrivateRoute>
         </Switch>
       </Router>
     </QueryClientProvider>
