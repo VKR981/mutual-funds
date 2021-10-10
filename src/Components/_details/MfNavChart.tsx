@@ -9,40 +9,12 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import { MutualFund } from "../../apis";
-const data = [
-  { name: "Page A", uv: 400, pv: 2400, amt: 2400 },
-  { name: "Page B", uv: 300, pv: 4567, amt: 2400 },
-  { name: "Page C", uv: 300, pv: 1398, amt: 2400 },
-  { name: "Page D", uv: 200, pv: 9800, amt: 2400 },
-  { name: "Page E", uv: 278, pv: 3908, amt: 2400 },
-  { name: "Page F", uv: 189, pv: 4800, amt: 2400 },
-  { name: "Page G", uv: 189, pv: 3800, amt: 2400 },
-  { name: "Page H", uv: 189, pv: 3800, amt: 2400 },
-  { name: "Page I", uv: 189, pv: 3800, amt: 2400 },
-  { name: "Page J", uv: 189, pv: 3800, amt: 2400 },
-  { name: "Page K", uv: 189, pv: 3800, amt: 2400 },
-  { name: "Page L", uv: 189, pv: 3800, amt: 2400 },
-  { name: "Page M", uv: 189, pv: 3800, amt: 2400 },
-  { name: "Page N", uv: 189, pv: 3800, amt: 2400 },
-  { name: "Page O", uv: 189, pv: 3800, amt: 2400 },
-  { name: "Page P", uv: 189, pv: 3800, amt: 2400 },
-  { name: "Page Q", uv: 189, pv: 3800, amt: 2400 },
-  { name: "Page R", uv: 189, pv: 3800, amt: 2400 },
-  { name: "Page S", uv: 189, pv: 3800, amt: 2400 },
-  { name: "Page T", uv: 189, pv: 3800, amt: 2400 },
-  { name: "Page U", uv: 189, pv: 3800, amt: 2400 },
-  { name: "Page V", uv: 189, pv: 3800, amt: 2400 },
-  { name: "Page W", uv: 189, pv: 3800, amt: 2400 },
-  { name: "Page X", uv: 189, pv: 3800, amt: 2400 },
-  { name: "Page Y", uv: 189, pv: 3800, amt: 2400 },
-  { name: "Page Z", uv: 189, pv: 3800, amt: 2400 },
-];
 
 interface Props {
   data: MutualFund["data"];
 }
 
-export const MfLineChart = ({ data }: Props) => {
+export const MfNavChart = ({ data }: Props) => {
   const formatedData = useMemo(
     () =>
       data.map((item) => ({
@@ -76,8 +48,8 @@ export const MfLineChart = ({ data }: Props) => {
           {getMinNav.nav}, at {getMinNav.date}
         </span>
       </div>
-      <div className="w-full overflow-auto h-96 p-4 pr-16 pb-0">
-        <ResponsiveContainer width={900} height="80%">
+      <div className="w-full overflow-auto h-72 p-4 pr-16 pb-0">
+        <ResponsiveContainer width={900} height="95%">
           <LineChart
             data={formatedData}
             margin={{ top: 5, right: 20, bottom: 5, left: 0 }}

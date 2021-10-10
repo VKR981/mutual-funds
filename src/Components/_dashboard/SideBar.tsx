@@ -13,7 +13,7 @@ export const SideBar = ({ show, toggle }: Props) => {
     {
       id: 1,
       name: "Dashboard",
-      onClick: () => history.push("/dashboard"),
+      onClick: () => history.push("/"),
     },
     {
       id: 2,
@@ -35,13 +35,13 @@ export const SideBar = ({ show, toggle }: Props) => {
     <div
       className={` transform ${
         show ? "translate-x-0" : "-translate-x-full"
-      } transition-transform overflow-hidden z-10 bg-cyan-800 text-white text-lg font-bold absolute h-full left-0 top-0 pt-8`}
+      } transition-transform overflow-hidden z-10 bg-gray-200 text-gray-800 text-lg font-bold absolute h-full left-0 top-0 pt-8`}
     >
       {sideBarOptions.map((option) => (
         <h1
           key={option.id}
           onClick={option.onClick}
-          className="py-2 px-4 w-36 cursor-pointer"
+          className="py-2 px-4 w-36 cursor-pointer select-none"
         >
           {option.name}
         </h1>
