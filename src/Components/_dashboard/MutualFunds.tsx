@@ -23,10 +23,10 @@ export const MutualFunds = () => {
           <thead className="border-b ">
             <tr>
               <th scope="col" className="pb-2 w-1/3">
-                Name
+                Scheme
               </th>
               <th scope="col" className="pb-2 w-1/3">
-                NAV
+                Category
               </th>
               <th scope="col" className="pb-2 w-1/3">
                 Change

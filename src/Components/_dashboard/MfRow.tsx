@@ -32,7 +32,7 @@ export const MfRow = ({ mutualFundId, filter }: Props) => {
       className="w-full "
     >
       <td className="px-1 py-2 w-1/3 text-center text-sm font-bold text-gray-600">
-        {fund_house}
+        {scheme_name.substring(scheme_name.indexOf("-") + 1)}
       </td>
       <td className="px-1 py-2 w-1/3 text-center text-sm text-gray-700">
         {scheme_category}

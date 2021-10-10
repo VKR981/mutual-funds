@@ -12,5 +12,5 @@ export const PrivateRoute = ({
 }) => {
   const currentUser = useAppSelector((state) => state.user.currentUser);
 
-  return <Route path={path}>{currentUser ? { children } : <Login />}</Route>;
+  return <Route path={path}>{currentUser ? children : <Login />}</Route>;
 };
