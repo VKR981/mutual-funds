@@ -128,7 +128,7 @@ export const SignUp = () => {
           <span>Sign Up</span>
         </Button>
         <p className="text-center font-bold">or</p>
-        <Button onClick={handleSubmit}>
+        <Button onClick={() => history.push("/login")}>
           <span>Login</span>
         </Button>
       </form>
