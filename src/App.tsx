@@ -11,6 +11,7 @@ import {
 } from "react-query";
 import { Details } from "./Pages/Details";
 import { Profile } from "./Pages/Profile";
+import { EditUserProfile } from "./Pages/EditUserProfile";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +31,9 @@ function App() {
           </Route>
           <Route path="/profile">
             <Profile />
+          </Route>
+          <Route path="/editprofile">
+            <EditUserProfile />
           </Route>
           <Route path="/">
             <Dashboard />

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { useAppSelector } from "../../hooks/redux";
-import { SideBar } from "./SideBar";
+import { useAppSelector } from "../hooks/redux";
+import { SideBar } from "./_dashboard/SideBar";
 
 export const Header = () => {
   const [isSideBarVisible, setIsSideBarVisible] = useState(false);
