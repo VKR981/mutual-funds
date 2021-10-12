@@ -31,7 +31,7 @@ export const Details = () => {
           {scheme_name}
         </h1>
         <h1
-          className="pl-4 font-bold underline"
+          className="pl-4 font-bold underline cursor-pointer"
           onClick={() => history.push("/")}
         >{`<- Back`}</h1>
         <div className="p-4">

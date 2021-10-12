@@ -101,6 +101,9 @@ export const EditUserProfile = () => {
   return (
     <div className="p-4 h-full w-full flex items-center justify-center">
       <form>
+        <h1 className="text-center font-bold text-gray-500 text-xl">
+          Edit Profile
+        </h1>
         <Input
           label="Email"
           id="email"

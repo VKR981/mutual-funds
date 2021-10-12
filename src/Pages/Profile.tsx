@@ -17,7 +17,7 @@ export const Profile = () => {
         <p className="font-bold text-lg text-gray-700 my-1">{user?.gender}</p>
         <p className="font-bold text-lg text-gray-700 my-1">{user?.dob}</p>
       </div>
-      <div className="px-8">
+      <div className="px-8 md:w-52 md:m-auto">
         <Button onClick={() => history.push("/editprofile")}>
           <span>Edit profile</span>
         </Button>

@@ -7,7 +7,10 @@ export const Header = () => {
   const userName = useAppSelector((state) => state.user.currentUser?.name);
   return (
     <div className="p-4 flex bg-gray-800">
-      <div onClick={() => setIsSideBarVisible(!isSideBarVisible)}>
+      <div
+        onClick={() => setIsSideBarVisible(!isSideBarVisible)}
+        className="md:hidden"
+      >
         <div className="bg-gray-400 w-8 h-1 rounded-full my-1" />
         <div className="bg-gray-400 w-8 h-1 rounded-full my-1" />
         <div className="bg-gray-400 w-8 h-1 rounded-full my-1" />

@@ -89,6 +89,7 @@ export const SignUp = () => {
   return (
     <div className="h-full w-screen flex items-center justify-center">
       <form>
+        <h1 className="text-center font-bold text-gray-500 text-xl">Sign Up</h1>
         <Input
           label="Email"
           id="email"

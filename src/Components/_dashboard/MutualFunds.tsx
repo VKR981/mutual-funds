@@ -7,7 +7,7 @@ const mutualFunds = ["100027", "100028", "100029", "100030", "100031"];
 export const MutualFunds = () => {
   const [filter, setFilter] = useState<string>();
   return (
-    <div className="p-2 m-2">
+    <div className="p-2 md:p-8 m-2">
       <div className="flex items-center w-full">
         <h1 className="text-center font-bold">Mutual Funds</h1>
         <Input
@@ -18,18 +18,30 @@ export const MutualFunds = () => {
           value={filter}
         />
       </div>
-      <div className="shadow-custom p-4 rounded-md">
+      <div className="shadow-custom p-4  rounded-md">
         <table className="table table-striped w-full">
           <thead className="border-b ">
             <tr>
-              <th scope="col" className="pb-2 w-1/3">
+              <th scope="col" className="pb-2 w-1/3 md:w-1/5">
                 Scheme
               </th>
-              <th scope="col" className="pb-2 w-1/3">
+              <th scope="col" className="pb-2 w-1/3 md:w-1/5">
                 Fund house
               </th>
-              <th scope="col" className="pb-2 w-1/3">
+              <th scope="col" className="pb-2 w-1/3 md:w-1/5">
                 NAV
+              </th>
+              <th
+                scope="col"
+                className="pb-2 w-1/3 md:w-1/5 md:table-cell hidden"
+              >
+                Scheme type
+              </th>
+              <th
+                scope="col"
+                className="pb-2 w-1/3 md:w-1/5 md:table-cell hidden"
+              >
+                Scheme category
               </th>
             </tr>
           </thead>

@@ -41,6 +41,7 @@ export const Login = () => {
   return (
     <div className="h-full w-screen flex items-center justify-center">
       <form>
+        <h1 className="text-center font-bold text-gray-500 text-xl">Login</h1>
         <Input
           label="Email"
           name="email"

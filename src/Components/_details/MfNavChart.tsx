@@ -49,10 +49,10 @@ export const MfNavChart = ({ data }: Props) => {
         </span>
       </div>
       <div className="w-full overflow-auto h-72 p-4 pr-16 pb-0">
-        <ResponsiveContainer width={900} height="95%">
+        <ResponsiveContainer width="100%" height={16 * 17}>
           <LineChart
             data={formatedData}
-            margin={{ top: 5, right: 20, bottom: 5, left: 0 }}
+            margin={{ top: 5, right: 10, bottom: 15, left: 0 }}
           >
             <Line type="monotone" dataKey="nav" stroke="#8884d8" />
             <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
